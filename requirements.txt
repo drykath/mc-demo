@@ -1,0 +1,8 @@
+Django>=3.2,<4.0
+# Only needed if you don't replace the templates
+django-bootstrap3==15.0.0
+gunicorn
+pillow
+
+-e git+https://github.com/drykath/mc-convention.git#egg=mc-convention
+-e git+https://github.com/drykath/mc-registration.git#egg=mc-registration

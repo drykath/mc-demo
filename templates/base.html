@@ -1,0 +1,40 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
+    <meta name="description" content="{% block meta_description %}{% endblock %}">
+    <title>{% block title_override %}{% block meta_title %}{% endblock %} | Demo/Test Convention{% endblock %}</title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    {% block banner %}<div class="banner">
+        <img id="img-banner" class="img-responsive center-block" src="{% block banner_override %}{% static 'images/banner.png' %}{% endblock %}"/>
+    </div>{% endblock %}
+    {# include "messages.html" #}
+
+    {% block precontent %}{% endblock %}
+
+    <div class="container">
+        {% block contentwrapper %}{% block content %}{% endblock %}{% endblock %}
+    </div>
+
+    <div class="footer-banner"></div>
+
+    {% block footer_js %}
+    {% endblock %}
+</body>
+</html>
