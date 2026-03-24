@@ -11,12 +11,15 @@ You should be able to clone this and get it running with something like:
     virtualenv myvirtualenv
     . myvirtualenv/bin/activate
     pip install -r mc-demo/requirements.txt
-    vim mc-demo/democonvention/settings.py to set a SECURITY_KEY
+    vim mc-demo/democonvention/settings.py to set a SECURITY_KEY and adjust ALLOWED_HOSTS to 127.0.0.1 if developing locally
     mc-demo/manage.py createsuperuser
     mc-demo/manage.py runserver
 
 It certainly won't look pretty, but it should work, and hopefully will
 be enough to get you going in the right direction.
+
+At the least, visit the admin (via 127.0.0.1/admin/) and create a
+Convention object first.
 
 If it's easier for editing the mc-* app code, you can also clone those
 repositories to an adjacent folder and symlink the apps here:
