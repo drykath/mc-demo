@@ -129,3 +129,7 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
+
+# Payment provider keys
+STRIPE_PUBLISHABLE_KEY = 'pk_(...)'
+STRIPE_SECRET_KEY = 'sk_(...)'

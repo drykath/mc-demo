@@ -3,7 +3,10 @@ Django>=4.2,<5.0
 django-bootstrap3==15.0.0
 gunicorn
 pillow
+
+# Temporary? registration requirements
 qrcode
+stripe==12.2.0
 
 -e git+https://github.com/drykath/mc-convention.git#egg=mc-convention
 -e git+https://github.com/drykath/mc-registration.git#egg=mc-registration
